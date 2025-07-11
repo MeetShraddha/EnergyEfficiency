@@ -28,7 +28,7 @@ name     role        type demographic                description units
 <img width="2485" height="2490" alt="image" src="https://github.com/user-attachments/assets/77a7fe32-7792-4ebe-8780-8c0e02b48e69" />
 
 
-                      Model    MSE  R2_Y1 (Heating Load)  R2_Y2 (Cooling Load)
+          Model                MSE                  R2_Y1 (Heating Load)  R2_Y2 (Cooling Load)
 0         Linear Regression   9.52                  0.91                  0.89
 1             Random Forest   1.94                  1.00                  0.96
 2         Gradient Boosting   1.28                  1.00                  0.98
