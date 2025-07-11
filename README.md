@@ -1,38 +1,87 @@
-# EnergyEfficiency
+# 🌿 Energy Efficiency Prediction
 
-Dataset reference: https://archive.ics.uci.edu/dataset/242/energy+efficiency
+> Predicting Heating and Cooling Loads of Buildings using Machine Learning
 
-This study looked into assessing the heating load and cooling load requirements of buildings (that is, energy efficiency) as a function of building parameters.
+[📂 Dataset Source (UCI ML Repo)](https://archive.ics.uci.edu/dataset/242/energy+efficiency)
 
-Summary: We perform energy analysis using 12 different building shapes simulated in Ecotect. The buildings differ with respect to the glazing area, the glazing area distribution, and the orientation, amongst other parameters. We simulate various settings as functions of the afore-mentioned characteristics to obtain 768 building shapes. The dataset comprises 768 samples and 8 features, aiming to predict two real valued responses. It can also be used as a multi-class classification problem if the response is rounded to the nearest integer.
+---
 
-Variable_info: The dataset contains eight attributes (or features, denoted by X1...X8) and two responses (or outcomes, denoted by 'target_col': ['Y1', 'Y2'])
+## 📌 Project Overview
 
-name     role        type demographic                description units  
-0   X1  Feature  Continuous        None       Relative Compactness  None   
-1   X2  Feature  Continuous        None               Surface Area  None   
-2   X3  Feature  Continuous        None                  Wall Area  None   
-3   X4  Feature  Continuous        None                  Roof Area  None   
-4   X5  Feature  Continuous        None             Overall Height  None   
-5   X6  Feature     Integer        None                Orientation  None   
-6   X7  Feature  Continuous        None               Glazing Area  None   
-7   X8  Feature     Integer        None  Glazing Area Distribution  None   
-8   Y1   Target  Continuous        None               Heating Load  None   
-9   Y2   Target  Continuous        None               Cooling Load  None
+This study aims to assess the **heating load** and **cooling load** requirements of buildings (i.e., energy efficiency) based on various **building parameters**. Using simulations from Ecotect for 12 building shapes under various conditions, the dataset includes:
 
+- **768 samples**
+- **8 features** (X1 to X8)
+- **2 target variables**:
+  - `Y1`: Heating Load  
+  - `Y2`: Cooling Load
 
-<img width="936" height="790" alt="image" src="https://github.com/user-attachments/assets/9fb4b4fe-741c-49d3-b824-b2bf0e25fc22" />
+---
 
+## 🧪 Dataset Summary
 
+> The buildings vary in glazing area, orientation, surface area, etc., and the dataset can be used for both regression and multi-class classification (if targets are rounded).
 
-<img width="2485" height="2490" alt="image" src="https://github.com/user-attachments/assets/77a7fe32-7792-4ebe-8780-8c0e02b48e69" />
+| Name | Role    | Type       | Description                   |
+|------|---------|------------|-------------------------------|
+| X1   | Feature | Continuous | Relative Compactness          |
+| X2   | Feature | Continuous | Surface Area                  |
+| X3   | Feature | Continuous | Wall Area                     |
+| X4   | Feature | Continuous | Roof Area                     |
+| X5   | Feature | Continuous | Overall Height                |
+| X6   | Feature | Integer    | Orientation                   |
+| X7   | Feature | Continuous | Glazing Area                  |
+| X8   | Feature | Integer    | Glazing Area Distribution     |
+| Y1   | Target  | Continuous | Heating Load                  |
+| Y2   | Target  | Continuous | Cooling Load                  |
 
+---
 
-| Model                    | MSE   | R²_Y1 (Heating Load) | R²_Y2 (Cooling Load) |
-|--------------------------|-------|-----------------------|-----------------------|
-| Linear Regression        | 9.52  | 0.91                  | 0.89                  |
-| Random Forest            | 1.94  | 1.00                  | 0.96                  |
-| Gradient Boosting        | 1.28  | 1.00                  | 0.98                  |
-| Support Vector Regressor| 30.31 | 0.69                  | 0.69                  |
-| XGBoost                  | 0.45  | 1.00                  | 0.99                  |
+## 📊 Visualizations
 
+### 🔍 Input Feature Distribution
+<img width="936" height="790" alt="Feature Distribution" src="https://github.com/user-attachments/assets/9fb4b4fe-741c-49d3-b824-b2bf0e25fc22" />
+
+### 📈 Model Predictions vs True Values
+<img width="2485" height="2490" alt="Model Performance" src="https://github.com/user-attachments/assets/77a7fe32-7792-4ebe-8780-8c0e02b48e69" />
+
+---
+
+## 🤖 Model Performance Comparison
+
+| Model                    | MSE   | R² (Heating Load) | R² (Cooling Load) |
+|--------------------------|-------|-------------------|-------------------|
+| Linear Regression        | 9.52  | 0.91              | 0.89              |
+| Random Forest            | 1.94  | 1.00              | 0.96              |
+| Gradient Boosting        | 1.28  | 1.00              | 0.98              |
+| Support Vector Regressor| 30.31 | 0.69              | 0.69              |
+| XGBoost                  | 0.45  | 1.00              | 0.99              |
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- XGBoost, LightGBM
+- Matplotlib, Seaborn
+- Jupyter Notebooks
+
+---
+
+## 🚀 Next Steps
+
+- ✅ Deploy model as a REST API using FastAPI
+- 📈 Build interactive dashboard using Streamlit
+- 🧠 Add SHAP interpretability for model insights
+- 🌐 Host report with GitHub Pages
+
+---
+
+## 📬 Contact
+
+For questions, feel free to reach out or open an issue.  
+Contributions welcome!
+
+---
