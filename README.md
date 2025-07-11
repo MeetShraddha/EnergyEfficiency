@@ -21,3 +21,4 @@ name     role        type demographic                description units
 9   Y2   Target  Continuous        None               Cooling Load  None
 
 
+<img width="936" height="790" alt="image" src="https://github.com/user-attachments/assets/9fb4b4fe-741c-49d3-b824-b2bf0e25fc22" />
